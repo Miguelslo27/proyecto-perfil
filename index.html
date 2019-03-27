@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Perfil personal - Miguel Sosa</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <img src="profile.png" alt="Foto de perfil de Miguel Angel"> <!-- ALT = TEXTO ALTERNATIVO -->
+
+  <div class="centered_layout">
+    <header>
+      <img src="profile.png"
+           alt="Foto de perfil de Miguel Angel"
+           class="profile_picture">
   
-  <h1>Miguel Angel Sosa</h1>
-
-  <ul>
-    <li>
-      <a href="contacto.html">Información de contacto</a>
-    </li>
-    <li>
-      <a href="autobio.html">Autobiografía</a>
-    </li>
-  </ul>
+      <h1>Miguel Angel Sosa</h1>
   
-  <h2>Bienvenido a mi perfil personal</h2>
+      <ul class="profile_links">
+        <li>
+          <a href="contacto.html">Información de contacto</a>
+        </li>
+        <li>
+          <a href="autobio.html" class="texto_destacado">Autobiografía</a>
+        </li>
+      </ul>
+    </header>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur feugiat ante et facilisis. Pellentesque fringilla justo ut porta dignissim. Nulla tincidunt quam quis massa volutpat, vitae finibus ligula dapibus. In condimentum finibus molestie. Proin suscipit fringilla dui vitae eleifend. In nec pellentesque nisi. Etiam aliquet mattis dolor, ac commodo purus congue rutrum. Aliquam condimentum nibh at dignissim efficitur. Sed interdum porttitor purus non tincidunt. Integer vitae nunc felis.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi possimus, nostrum consequatur esse ducimus architecto iure voluptatem consequuntur placeat hic corrupti libero velit ad corporis ut mollitia, aliquam natus quia.</p>
+    <h2 class="texto_destacado">Bienvenido a mi perfil personal</h2>
 
-  <table width="50%">
-    <caption>
-      <h3>
-        Mis habilidades
-      </h3>
-    </caption>
-    <thead>
-      <tr>
-        <th>
-          Materia
-        </th>
-        <th>
-          Nivel de desempeño
-        </th>
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <td>Git</td>
-        <td><progress max="100" value="50"></progress></td>
-      </tr>
-      <tr>
-        <td>HTML</td>
-        <td><progress max="100" value="80"></progress></td>
-      </tr>
-      <tr>
-        <td>CSS</td>
-        <td><progress max="100" value="65"></progress></td>
-      </tr>
-      <tr>
-        <td>JavaScript</td>
-        <td><progress max="100" value="85"></progress></td>
-      </tr>
-    </tfoot>
-  </table>
+    <p>Lorem ipsum dolor sit amet, <span class="texto_destacado">consectetur adipiscing elit</span>. Aenean consectetur
+      feugiat ante et facilisis. Pellentesque fringilla justo ut porta dignissim. Nulla tincidunt quam quis massa
+      volutpat, vitae finibus ligula dapibus. In condimentum finibus molestie. Proin suscipit fringilla dui vitae
+      eleifend. In nec pellentesque nisi. Etiam aliquet mattis dolor, ac commodo purus congue rutrum. Aliquam
+      condimentum nibh at dignissim efficitur. Sed interdum porttitor purus non tincidunt. Integer vitae nunc felis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi possimus, nostrum consequatur esse ducimus
+      architecto iure voluptatem consequuntur placeat hic corrupti libero velit ad corporis ut mollitia, aliquam natus
+      quia.</p>
 
+    <table>
+      <caption>
+        <h3>
+          Mis habilidades
+        </h3>
+      </caption>
+      <thead>
+        <tr>
+          <th>
+            Materia
+          </th>
+          <th>
+            Nivel de desempeño
+          </th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td>Git</td>
+          <td><progress max="100" value="50"></progress></td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td><progress max="100" value="80"></progress></td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td><progress max="100" value="65"></progress></td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td><progress max="100" value="85"></progress></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  
 </body>
 </html>

@@ -1,0 +1,61 @@
+/* 
+
+  PROPIEDADES CSS
+
+  Propiedades visuales
+
+  - background
+  - color
+  - border-radius
+  - list-style
+
+  Propiedades del texto
+
+  - text-align
+  - text-transform
+  - font-family
+
+  Propiedades del modelo de cajas
+
+  - width
+  - height
+  - margin
+  - padding
+  - box-sizing
+
+ */
+body {
+  background: skyblue;
+  font-family: Arial;
+}
+
+h1 {}
+
+li {}
+
+a {}
+
+table {
+  width: 50%;
+}
+
+header {
+  text-align: center;
+}
+
+.profile_picture {
+  width: 250px;
+  border-radius: 50%;
+}
+
+.profile_links {
+  list-style: none;
+  padding: 0;
+}
+
+.highlight {}
+
+.centered_layout {
+  width: 1200px;
+  margin: auto;
+}
