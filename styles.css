@@ -13,7 +13,12 @@
 
   - text-align
   - text-transform
+  - text-decoration
+
+  Propiedades de caracter
+
   - font-family
+  -
 
   Propiedades del modelo de cajas
 
@@ -23,10 +28,107 @@
   - padding
   - box-sizing
 
+  selector {
+    nombrepropiedad: valor de la propiedad;
+  }
+
+
+  Colores
+
+  Formato hexadecimal
+  0 - F
+
+  RR GG BB
+
+  #FFFFFF = Blanco 
+  #000000 = Ausencia de color = Negro
+  #FF0000 = Rojo
+  #00FF00 = Verde
+  #0000FF = Azul
+
+  
+  Pseudo selectores
+
+  a - Estado normal del hipervinculo
+  a:visited 
+  
  */
+
+
+/* Selectore de la etiqueta body */
 body {
-  background: skyblue;
+  margin: 0;
+  padding: 0;
   font-family: Arial;
+}
+
+.centered_layout {
+  width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: #E0E0E0;
+  border-bottom: 2px solid #bbb;
+}
+
+aside {
+  width: 25%;
+  float: left;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+aside h3 {
+  font-weight: normal;
+}
+
+aside ul {
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+aside ul li {
+}
+
+aside ul li:hover {
+  background: #E0E0E0;
+  padding-left: 15px;
+}
+
+aside ul li:hover a {
+  color: #000;
+}
+
+aside ul li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #888;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* aside ul li a:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 4px;
+  height: 4px;
+  background: #000;
+}  */
+
+section {
+  width: 75%;
+  float: right;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 h1 {}
@@ -39,23 +141,7 @@ table {
   width: 50%;
 }
 
-header {
-  text-align: center;
-}
-
 .profile_picture {
-  width: 250px;
+  width: 260px;
   border-radius: 50%;
-}
-
-.profile_links {
-  list-style: none;
-  padding: 0;
-}
-
-.highlight {}
-
-.centered_layout {
-  width: 1200px;
-  margin: auto;
 }
