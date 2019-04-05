@@ -78,14 +78,10 @@ header nav a:before {
   text-align: right;
 }
 
-.column-center {
-}
+.column-center {}
 
 .column-right {
-  /* test */
-  background: yellow;
-  height: 400px;
-  /* test */
+  padding: 20px;
 }
 
 #profile-info h1 {
@@ -115,4 +111,34 @@ header nav a:before {
 
 #profile-picture img {
   width: 100%;
+}
+
+#profile-skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#profile-skills ul li {
+  margin-bottom: 40px;
+}
+
+#profile-skills ul li h3 {
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+#profile-skills ul li h3 span {
+  color: #E1C340;
+}
+
+.progress {
+  height: 5px;
+  background: #ddd;
+}
+
+.progress .value {
+  height: 5px;
+  background: #E1C340;
 }
