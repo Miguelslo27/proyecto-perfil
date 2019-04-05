@@ -19,8 +19,9 @@ body {
 .button-default {
   display: inline-block;
   padding: 20px 40px;
-  border: 2px solid #fff;
   background: #1C2530;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #1C2530;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
