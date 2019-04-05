@@ -71,6 +71,13 @@ header nav a:before {
 .column-right {
   width: 33.333%;
   box-sizing: border-box;
+
+  /* Test */
+  display: flex;
+  height: 444px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .column-left {
@@ -99,6 +106,7 @@ header nav a:before {
   width: 40px;
   height: 5px;
   margin-bottom: 30px;
+  margin-right: 0;
   border: 0;
   background: #E1C340;
 }
@@ -114,9 +122,10 @@ header nav a:before {
 }
 
 #profile-skills ul {
-  list-style: none;
+  width: 100%;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 #profile-skills ul li {
