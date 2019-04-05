@@ -66,10 +66,19 @@ header nav a:before {
   padding-top: 20px;
 }
 
+.three-columns {
+  display: flex;
+}
+
 .column-left,
 .column-center,
 .column-right {
-  width: 33.333%;
+  /* Test */
+  flex-grow: 1;
+  background: orange;
+  /* Test */
+  
+  /* width: 33.333%; */
   box-sizing: border-box;
 }
 
