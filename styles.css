@@ -62,22 +62,26 @@ header nav a:before {
 }
 
 .content {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
   padding-top: 20px;
+  flex-basis: 1;
+  flex-grow: 1;
+  background: yellow;
 }
 
 .column-left,
 .column-center,
 .column-right {
-  width: 33.333%;
+  /* width: 33.333%; */
   box-sizing: border-box;
 
   /* Test */
-  display: flex;
-  height: 444px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  /* display: flex; */
+  /* height: 444px; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: flex-end; */
 }
 
 .column-left {
