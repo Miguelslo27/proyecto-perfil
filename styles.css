@@ -2,7 +2,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial;
+  font-family: Lato;
+}
+
+h1, h2, h3 {
+  font-family: Roboto;
+}
+
+img {
+  display: block;
 }
 
 /* Helper classes */
@@ -12,6 +20,22 @@ body {
 
 .right {
   float: right;
+}
+
+.layout-columns {
+  display: flex;
+  padding-top: 20px;
+  align-items: flex-end;
+}
+
+.layout-columns .col {
+  flex: 1;
+  flex-grow: 1;
+}
+
+.layout-columns .col-2 {
+  flex: 1;
+  flex-grow: 2;
 }
 
 .button-primary,
@@ -61,27 +85,12 @@ header nav a:before {
   color: #E1C340;
 }
 
-.content {
-  /* overflow: hidden; */
-  display: flex;
-  padding-top: 20px;
-  flex-basis: 1;
-  flex-grow: 1;
-  background: yellow;
-}
+.content {}
 
 .column-left,
 .column-center,
 .column-right {
-  /* width: 33.333%; */
   box-sizing: border-box;
-
-  /* Test */
-  /* display: flex; */
-  /* height: 444px; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: flex-end; */
 }
 
 .column-left {
@@ -136,6 +145,10 @@ header nav a:before {
   margin-bottom: 40px;
 }
 
+#profile-skills ul li:last-child {
+  margin-bottom: 20px;
+}
+
 #profile-skills ul li h3 {
   text-align: center;
   font-size: 13px;
@@ -154,4 +167,57 @@ header nav a:before {
 .progress .value {
   height: 5px;
   background: #E1C340;
+}
+
+footer {
+  background: #1C2530;
+  padding: 50px 80px !important;
+  box-sizing: border-box;
+  color: #FFF;
+}
+
+footer.layout-columns {
+  align-items: flex-start;
+}
+
+footer aside.layout-columns {
+  align-items: flex-start;
+}
+
+footer aside div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer aside .icon i {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  border: 3px dotted #fff;
+  border-radius: 50%;
+  font-size: 32px;
+}
+
+footer aside .info {
+  padding-left: 20px;
+  align-items: center;
+}
+
+footer aside .info h3 {
+  margin: 0;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+footer aside .info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer aside .info ul li {
+  padding: .2em;
+  font-size: 14px;
 }

@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mi sitio personal</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,20 +25,20 @@
     </nav>
   </header>
 
-  <section class="content centered_layout">
-    <aside id="profile-info" class="column-left">
+  <section class="content centered_layout layout-columns">
+    <aside id="profile-info" class="col column-left">
       <h1>Miguel Sosa</h1>
       <h2>WEB UI Developer</h2>
       <hr class="right">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nemo possimus aliquam accusamus magni quis error saepe sunt ipsum assumenda numquam, reprehenderit sequi enim nulla ut a veniam odio rem.</p>
       <a href="#" class="button-primary">Contrátame</a>
     </aside>
-    <section id="profile-picture" class="column-center">
+    <section id="profile-picture" class="col column-center">
       <div class="picture-clip">
         <img src="profile.png" alt="Miguel Angel Sosa">
       </div>
     </section>
-    <aside id="profile-skills" class="column-right">
+    <aside id="profile-skills" class="col column-right">
       <ul class="skills">
         <li>
           <h3>HTML <span>(80%)</span></h3>
@@ -62,6 +67,50 @@
       </ul>
     </aside>
   </section>
-  
+
+  <footer class="centered_layout layout-columns">
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Telefonos
+        </h3>
+        <ul>
+          <li>091 066 416</li>
+          <li>4375 11 34</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Dirección
+        </h3>
+        <ul>
+          <li>Calle 39 y J</li>
+          <li>Parque del Plata, Canelones</li>
+          <li>Uruguay - 16100</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fab fa-telegram-plane"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Dirección de Email
+        </h3>
+        <ul>
+          <li>miguelmail2006@gmail.com</li>
+        </ul>
+      </div>
+    </aside>
+  </footer>
 </body>
 </html>
