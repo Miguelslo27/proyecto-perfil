@@ -74,6 +74,11 @@ header nav a:before {
 .column-center,
 .column-right {
   /* Test */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end; */
+  flex: 1;
   flex-grow: 1;
   background: orange;
   /* Test */
