@@ -1,90 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Perfil personal - Miguel Sosa</title>
+  <title>Mi sitio personal</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <header>
+    <nav class="centered_layout">
+      <a href="">Inicio</a>
+      <a href="">Acerca de mi</a>
+      <a href="">Servcios</a>
+      <a href="">Portfolio</a>
+      <a href="">Experiencia</a>
+      <a href="">Contacto</a>
+    </nav>
+  </header>
 
-  <div class="centered_layout">
-    <header>
-      <img src="profile.png"
-           alt="Foto de perfil de Miguel Angel"
-           class="profile_picture">
-  
-      <h1>Miguel Angel Sosa</h1>
-    </header>
-
-    <aside>
-      <h3>Navega mi inforamción</h3>
-      <hr>
-      <ul>
+  <section class="content centered_layout layout-columns layout-bottom-clumns">
+    <aside id="profile-info" class="col column-left">
+      <h1>Miguel Sosa</h1>
+      <h2>WEB UI Developer</h2>
+      <hr class="right">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nemo possimus aliquam accusamus magni quis error saepe sunt ipsum assumenda numquam, reprehenderit sequi enim nulla ut a veniam odio rem.</p>
+      <a href="#" class="button-primary">Contrátame</a>
+    </aside>
+    <section id="profile-picture" class="col column-center">
+      <div class="picture-clip">
+        <img src="profile.png" alt="Miguel Angel Sosa">
+      </div>
+    </section>
+    <aside id="profile-skills" class="col column-right">
+      <ul class="skills">
         <li>
-          <a href="contacto.html">Información de contacto</a>
+          <h3>HTML <span>(80%)</span></h3>
+          <div class="progress">
+            <div class="value" style="width: 80%;"></div>
+          </div>
         </li>
         <li>
-          <a href="autobio.html" class="texto_destacado">Autobiografía</a>
+          <h3>CSS <span>(75%)</span></h3>
+          <div class="progress">
+              <div class="value" style="width: 75%;"></div>
+            </div>
+        </li>
+        <li>
+          <h3>JavaScript <span>(90%)</span></h3>
+          <div class="progress">
+            <div class="value" style="width: 90%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>MySQL <span>(60%)</span></h3>
+          <div class="progress">
+            <div class="value" style="width: 60%;"></div>
+          </div>
         </li>
       </ul>
     </aside>
+  </section>
 
-    <section>
-      <h2 class="texto_destacado">Bienvenido a mi perfil personal</h2>
-
-      <p>Lorem ipsum dolor sit amet, <span class="texto_destacado">consectetur adipiscing elit</span>. Aenean consectetur
-        feugiat ante et facilisis. Pellentesque fringilla justo ut porta dignissim. Nulla tincidunt quam quis massa
-        volutpat, vitae finibus ligula dapibus. In condimentum finibus molestie. Proin suscipit fringilla dui vitae
-        eleifend. In nec pellentesque nisi. Etiam aliquet mattis dolor, ac commodo purus congue rutrum. Aliquam
-        condimentum nibh at dignissim efficitur. Sed interdum porttitor purus non tincidunt. Integer vitae nunc felis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi possimus, nostrum consequatur esse ducimus
-        architecto iure voluptatem consequuntur placeat hic corrupti libero velit ad corporis ut mollitia, aliquam natus
-        quia.</p>
-  
-      <hr>
-        
-      <table>
-        <caption>
-          <h3>
-            Mis habilidades
-          </h3>
-        </caption>
-        <thead>
-          <tr>
-            <th>
-              Materia
-            </th>
-            <th>
-              Nivel de desempeño
-            </th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td>Git</td>
-            <td><progress max="100" value="50"></progress></td>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td><progress max="100" value="80"></progress></td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td><progress max="100" value="65"></progress></td>
-          </tr>
-          <tr>
-            <td>JavaScript</td>
-            <td><progress max="100" value="85"></progress></td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
-      
-  </div>
-
+  <footer class="centered_layout layout-columns">
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Telefonos
+        </h3>
+        <ul>
+          <li>091 066 416</li>
+          <li>4375 11 34</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Dirección
+        </h3>
+        <ul>
+          <li>Calle 39 y J</li>
+          <li>Parque del Plata, Canelones</li>
+          <li>Uruguay - 16100</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fab fa-telegram-plane"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Dirección de Email
+        </h3>
+        <ul>
+          <li>miguelmail2006@gmail.com</li>
+        </ul>
+      </div>
+    </aside>
+  </footer>
 </body>
 </html>
