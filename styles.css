@@ -14,6 +14,14 @@ img {
 }
 
 /* Helper classes */
+.desktop {
+  display: initial;
+}
+
+.mobile {
+  display: none;
+}
+
 .left {
   float: left;
 }
@@ -57,7 +65,9 @@ img {
 /* End helper classes */
 
 .centered_layout {
-  width: 1200px;
+  width: 90%;
+  min-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -216,4 +226,20 @@ footer aside .info ul {
 footer aside .info ul li {
   padding: .2em;
   font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .desktop {
+    display: none;
+  }
+  
+  .mobile {
+    display: initial;
+  }
+  
+  .centered_layout {
+    width: 100%;
+    max-width: auto;
+    min-width: auto;
+  }
 }
