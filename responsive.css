@@ -1,3 +1,78 @@
-h1 {
-  font-size: 180px;
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: initial;
+}
+
+header {
+  text-align: left;
+}
+
+header nav.mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+header nav.mobile a {
+  font-size: 24px;
+  margin: 0;
+  padding: 0 30px;
+}
+
+header nav.mobile a:before {
+  content: "";
+  margin: 0;
+}
+
+header nav.mobile.menu-hidden {
+  display: none;
+}
+
+header nav.mobile.menu-visible {
+  display: flex;
+}
+
+.centered_layout {
+  width: 100%;
+  max-width: initial;
+  min-width: initial;
+}
+
+.layout-columns {
+  display: grid;
+  padding-top: 0;
+  grid-template-columns: 1fr;
+}
+
+.layout-columns .col {
+  width: 100%;
+  flex: initial;
+  flex-grow: 0;
+}
+
+.content {
+  background-image: url(profile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#profile-info {
+  background-color: rgba(255, 255, 255, .8);
+  text-align: center;
+}
+
+#profile-info hr {
+  float: none;
+  margin: 0 auto 30px;
+}
+
+#profile-picture {
+  display: none;
+}
+
+#profile-skills {
+  background-color: rgba(255, 255, 255, .8);
 }
