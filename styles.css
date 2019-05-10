@@ -30,6 +30,10 @@ img {
   float: right;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .layout-columns {
   display: flex;
   padding-top: 20px;
@@ -73,6 +77,10 @@ img {
 
 header {
   text-align: center;
+}
+
+header,
+header nav {
   background-color: #1C2530;
 }
 
@@ -226,57 +234,4 @@ footer aside .info ul {
 footer aside .info ul li {
   padding: .2em;
   font-size: 14px;
-}
-
-@media (max-width: 720px) {
-  .desktop {
-    display: none;
-  }
-  
-  .mobile {
-    display: initial;
-  }
-  
-  .centered_layout {
-    width: 100%;
-    max-width: initial;
-    min-width: initial;
-  }
-  
-  .layout-columns {
-    display: grid;
-    padding-top: 0;
-    grid-template-columns: 1fr;
-  }
-
-  .layout-columns .col {
-    width: 100%;
-    flex: initial;
-    flex-grow: 0;
-  }
-
-  .content {
-    background-image: url(profile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  
-  #profile-info {
-    background-color: rgba(255, 255, 255, .8);
-    text-align: center;
-  }
-
-  #profile-info hr {
-    float: none;
-    margin: 0 auto 30px;
-  }
-
-  #profile-picture {
-    display: none;
-  }
-
-  #profile-skills {
-    background-color: rgba(255, 255, 255, .8);
-  }
 }
