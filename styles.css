@@ -30,6 +30,10 @@ img {
   float: right;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .layout-columns {
   display: flex;
   padding-top: 20px;
@@ -73,6 +77,10 @@ img {
 
 header {
   text-align: center;
+}
+
+header,
+header nav {
   background-color: #1C2530;
 }
 
