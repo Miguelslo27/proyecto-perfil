@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mi sitio personal</title>
+  <title>Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
   <link rel="stylesheet"
@@ -19,7 +19,7 @@
   <header>
     <nav class="centered_layout desktop">
       <a href="index.html">Inicio</a>
-      <a href="#">Acerca de mi</a>
+      <a href="about.html">Acerca de mi</a>
       <a href="#">Servcios</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="#">Experiencia</a>
@@ -39,46 +39,30 @@
   </header>
 
   <section class="content centered_layout layout-columns layout-bottom-clumns">
-    <aside id="profile-info" class="col column-left">
-      <h1>Miguel Sosa</h1>
-      <h2>WEB UI Developer</h2>
-      <hr class="right">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nemo possimus aliquam accusamus magni quis error saepe sunt ipsum assumenda numquam, reprehenderit sequi enim nulla ut a veniam odio rem.</p>
-      <a href="#" class="button-primary" id="hire-me-button">Contrátame</a>
-    </aside>
-    <section id="profile-picture" class="col column-center">
-      <div class="picture-clip">
-        <img src="profile.png" alt="Miguel Angel Sosa">
-      </div>
-    </section>
-    <aside id="profile-skills" class="col column-right">
-      <ul class="skills">
-        <li>
-          <h3>HTML <span>(80%)</span></h3>
-          <div class="progress">
-            <div class="value" style="width: 80%;"></div>
-          </div>
-        </li>
-        <li>
-          <h3>CSS <span>(75%)</span></h3>
-          <div class="progress">
-              <div class="value" style="width: 75%;"></div>
-            </div>
-        </li>
-        <li>
-          <h3>JavaScript <span>(90%)</span></h3>
-          <div class="progress">
-            <div class="value" style="width: 90%;"></div>
-          </div>
-        </li>
-        <li>
-          <h3>MySQL <span>(60%)</span></h3>
-          <div class="progress">
-            <div class="value" style="width: 60%;"></div>
-          </div>
-        </li>
-      </ul>
-    </aside>
+
+    <div class="calc">
+      <form action="javascript: void(0);" id="calc_form">
+        <input type="number" id="calc_input" value="0">
+
+        <!-- <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button> -->
+
+        <button id="calc_sum">+</button>
+        <button id="calc_subs">-</button>
+        <button id="calc_div">/</button>
+        <button id="calc_mult">*</button>
+        <button id="calc_eq">=</button>
+      </form>
+    </div>
+    
   </section>
 
   <footer class="centered_layout layout-columns">
@@ -126,6 +110,7 @@
     </aside>
   </footer>
 
+  <script src="calc.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
