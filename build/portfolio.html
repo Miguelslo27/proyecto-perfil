@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css" media="(max-width: 720px)">
+</head>
+<body>
+  <header>
+    <nav class="centered_layout desktop">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Acerca de mi</a>
+      <a href="#">Servcios</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#">Experiencia</a>
+      <a href="#">Contacto</a>
+    </nav>
+    <nav class="mobile">
+      <a id="menu-button" href="#"><i class="fas fa-bars"></i></a>
+    </nav>
+    <nav id="mobile-menu" class="mobile menu-hidden"> 
+      <a href="index.html">Inicio</a>
+      <a href="#">Acerca de mi</a>
+      <a href="#">Servcios</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#">Experiencia</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="content centered_layout layout-columns layout-bottom-clumns">
+
+    <div class="calc">
+      <form action="javascript: void(0);" id="calc_form">
+        <input type="number" id="calc_input" value="0">
+
+        <!-- <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button> -->
+
+        <button id="calc_sum">+</button>
+        <button id="calc_subs">-</button>
+        <button id="calc_div">/</button>
+        <button id="calc_mult">*</button>
+        <button id="calc_eq">=</button>
+      </form>
+    </div>
+    
+  </section>
+
+  <footer class="centered_layout layout-columns">
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Telefonos
+        </h3>
+        <ul>
+          <li>091 066 416</li>
+          <li>4375 11 34</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Dirección
+        </h3>
+        <ul>
+          <li>Calle 39 y J</li>
+          <li>Parque del Plata, Canelones</li>
+          <li>Uruguay - 16100</li>
+        </ul>
+      </div>
+    </aside>
+    <aside class="col layout-columns">
+      <div class="icon col">
+        <i class="fab fa-telegram-plane"></i>
+      </div>
+      <div class="info col-2">
+        <h3>
+          Dirección de Email
+        </h3>
+        <ul>
+          <li>miguelmail2006@gmail.com</li>
+        </ul>
+      </div>
+    </aside>
+  </footer>
+
+  <script src="calc.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

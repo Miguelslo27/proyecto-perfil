@@ -1,0 +1,26 @@
+{
+  "name": "proyecto-perfil",
+  "version": "1.0.0",
+  "description": "Pagina de perfil personal",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miguelslo27/proyecto-perfil.git"
+  },
+  "author": "Miguel Angel Sosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Miguelslo27/proyecto-perfil/issues"
+  },
+  "homepage": "https://github.com/Miguelslo27/proyecto-perfil#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
