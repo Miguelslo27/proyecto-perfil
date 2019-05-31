@@ -66,7 +66,7 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 12px;
-  @include dobuleBorder(3px,orange, green);
+  @include dobuleBorder(3px,white, $primary-color);
 }
 /* End helper classes */
 
