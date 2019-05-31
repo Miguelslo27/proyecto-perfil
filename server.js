@@ -1,9 +1,9 @@
 var express = require('express');
 var server = express();
 
-server.get('/', function (request, response) {
+server.get('/', function (req, res) {
   console.log('Esta es la raiz de mi sitio');
-  response.status(200).send('Bienvenido a mi servidor');
+  req.status(200).send('Bienvenido a mi servidor');
 });
 
 server.get('/contact', function (req, res) {

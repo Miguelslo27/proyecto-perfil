@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <include src="head-metatags"></include>
+  <include src="head-frameworks"></include>
+  <include src="head-styles"></include>
+
+  <title>Mi sitio personal</title>
+</head>
+
+<body>
+  <include src="header"></include>
+
+  <section class="content centered_layout layout-columns layout-bottom-clumns">
+    <div class="calc">
+      <form action="javascript: void(0);" id="calc_form">
+        <input type="number" id="calc_input" value="0">
+
+        <button id="calc_sum">+</button>
+        <button id="calc_subs">-</button>
+        <button id="calc_div">/</button>
+        <button id="calc_mult">*</button>
+        <button id="calc_eq">=</button>
+      </form>
+    </div>
+
+  </section>
+
+  <include src="footer.html"></include>
+
+  <script src="calc.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

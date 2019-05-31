@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <include src="head-metatags"></include>  
+  <include src="head-frameworks"></include>  
+  <include src="head-styles"></include>  
+
+  <title>Mi sitio personal</title>
+</head>
+<body>
+  <include src="header"></include>
+
+  <section class="content centered_layout layout-columns layout-bottom-clumns">
+    <aside id="profile-info" class="col column-left">
+      <h1>Miguel Sosa</h1>
+      <h2>WEB UI Developer</h2>
+      <hr class="right">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nemo possimus aliquam accusamus magni quis error saepe sunt ipsum assumenda numquam, reprehenderit sequi enim nulla ut a veniam odio rem.</p>
+      <a href="#" class="button-primary" id="hire-me-button">Contrátame</a>
+    </aside>
+    <section id="profile-picture" class="col column-center">
+      <div class="picture-clip">
+        <img src="profile.png" alt="Miguel Angel Sosa">
+      </div>
+    </section>
+    <aside id="profile-skills" class="col column-right">
+      <ul class="skills">
+        <li>
+          <h3>HTML <span>(80%)</span></h3>
+          <div class="progress">
+            <div class="value" style="width: 80%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>CSS <span>(75%)</span></h3>
+          <div class="progress">
+              <div class="value" style="width: 75%;"></div>
+            </div>
+        </li>
+        <li>
+          <h3>JavaScript <span>(90%)</span></h3>
+          <div class="progress">
+            <div class="value" style="width: 90%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>MySQL <span>(60%)</span></h3>
+          <div class="progress">
+            <div class="value" style="width: 60%;"></div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </section>
+
+  <include src="footer.html"></include>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
