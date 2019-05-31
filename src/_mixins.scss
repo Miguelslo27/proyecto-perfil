@@ -1,0 +1,5 @@
+// Mixins
+@mixin dobuleBorder($border-size, $borer-primary-color, $border-secondary-color) {
+  border: $border-size solid $borer-primary-color;
+  box-shadow: 0 0 0 $border-size $border-secondary-color;
+};
