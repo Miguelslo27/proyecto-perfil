@@ -3,14 +3,19 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var teddy = require('gulp-teddy').settings({
   setTemplateRoot: 'src/templates/'
-});;
+});
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('build:html', function () {
   console.log('Build HTML has started');
 
   return gulp
-    .src('./src/*.html')
+    .src([
+      './src/*.html',
+      '!.src/templates'
+    ])
     .pipe(teddy.compile())
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./.temp'))
     .pipe(reload({ stream: true }));
 });
@@ -21,6 +26,7 @@ gulp.task('build:files', function () {
   return gulp
     .src([
       './src/*',
+      '!./src/templates',
       '!./src/*.html'
     ])
     .pipe(gulp.dest('./.temp'))
