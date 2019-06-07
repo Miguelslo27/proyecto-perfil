@@ -3,7 +3,7 @@ var server = express();
 
 server.get('/', function (req, res) {
   console.log('Esta es la raiz de mi sitio');
-  req.status(200).send('Bienvenido a mi servidor');
+  res.status(200).send('Bienvenido a mi servidor');
 });
 
 server.get('/contact', function (req, res) {
