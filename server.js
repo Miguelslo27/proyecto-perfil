@@ -2,6 +2,8 @@ var express = require('express');
 var server = express();
 var path = require('path');
 
+server.use(express.static(__dirname + '/dist/'));
+
 server.get('/', function (req, res) {
   // console.log('Esta es la raiz de mi sitio');
   // res.status(200).send('Bienvenido a mi servidor');
