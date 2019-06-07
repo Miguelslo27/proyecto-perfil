@@ -10,6 +10,6 @@ server.get('/contact', function (req, res) {
   res.status(200).send('Pagina de Contacto');
 });
 
-server.listen(2500, function () {
+server.listen(process.env.PORT || 8080, function () {
   console.log('Mi servidor esta en linea en el puerto 2500');
 });
