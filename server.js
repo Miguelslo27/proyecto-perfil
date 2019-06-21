@@ -5,16 +5,6 @@ var port = process.env.PORT || 8080;
 var env = process.env.ENV || 'DEV';
 var folderBuild = env == 'PROD' ? '/dist/' : '/.temp/';
 
-/*
-if (condicion) {
-  // si se cumple la condicion
-} else {
-  // si no se cumple la condicion
-}
-
-condicion ? si secumple : si no se cumple;
-*/
-
 server.use(express.static(path.join(__dirname, folderBuild)));
 
 server.get('/', function (req, res) {
