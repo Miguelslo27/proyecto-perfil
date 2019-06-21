@@ -45,7 +45,7 @@ img {
     flex: 1;
     flex-grow: 1;
   }
-  
+
   .col-2 {
     flex: 1;
     flex-grow: 2;
@@ -93,6 +93,11 @@ header {
       font-size: 12px;
       text-transform: uppercase;
       text-decoration: none;
+
+      &.active {
+        font-weight: bold;
+        color: $secondary-color;
+      }
 
       &:hover {
         color: $secondary-color;
