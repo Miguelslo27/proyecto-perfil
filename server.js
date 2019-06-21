@@ -1,6 +1,9 @@
 var express = require('express');
 var server = express();
 var path = require('path');
+var port = process.env.PORT || 8080;
+
+server.use(express.static(path.join(__dirname, '/dist/')));
 
 server.get('/', function (req, res) {
   // console.log('Esta es la raiz de mi sitio');
@@ -12,6 +15,6 @@ server.get('/contact', function (req, res) {
   res.status(200).send('Pagina de Contacto');
 });
 
-server.listen(process.env.PORT || 8080, function () {
-  console.log('Mi servidor esta en linea en el puerto 2500');
+server.listen(port, function () {
+  console.log('Mi servidor esta en linea en el puerto ' + port);
 });
