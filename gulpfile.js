@@ -3,7 +3,8 @@ var clean = require('gulp-clean');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var teddy = require('gulp-teddy').settings({
-  setTemplateRoot: 'src/templates/'
+  setTemplateRoot: 'src/templates/',
+  compileAtEveryRender: true
 });
 // var htmlmin = require('gulp-htmlmin');
 var gulp = require('gulp');
@@ -23,8 +24,7 @@ gulp.task('build:html', function () {
 
   return gulp
     .src([
-      './src/*.html',
-      '!.src/templates'
+      './src/**/*.html'
     ])
     .pipe(teddy.compile())
     .pipe(gulp.dest('./.temp'))
@@ -97,14 +97,4 @@ gulp.task('watch', gulp.series(['build:dev'], function(done) {
 
 gulp.task('build:prod', gulp.series('build:html:prod', 'build:sass:prod', 'build:files:prod'));
 
-gulp.task('serve', gulp.series(['watch'], function () {
-  console.log("Serve has started");
-  
-  browserSync({
-    server: {
-      baseDir: './.temp'
-    }
-  });
-}));
-
-// gulp.task('default', gulp.series(['build:dev']));
+gulp.task('default', gulp.series(['watch']));
