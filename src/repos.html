@@ -52,35 +52,41 @@
 
     var placeHolder = document.getElementById('repos-placeholder');
     var gitReposContainer = document.getElementById('repos');
+    var gitRepo;
+    var articleRepo;
 
     placeHolder.classList.add('d-none');
     gitReposContainer.classList.remove('d-none');
 
-    for (var i = 0; i < gitRepos.length; i++) { // i = i + || i += 1 || i++
-      var gitRepo = gitRepos[i];
-
-      var articleRepoElement = document.createElement('article');
-      articleRepoElement.classList.add('repo');
-
-      var repoTitleElement = document.createElement('h3');
-      var repoTitleText = document.createTextNode(gitRepo.name);
-      repoTitleElement.appendChild(repoTitleText);
-
-      var repoUrlElement = document.createElement('p');
-      var repoUrlText = document.createTextNode('URL: ');
-      var repoUrlLink = document.createElement('a');
-      var repoUrlLinkText = document.createTextNode(gitRepo.html_url);
-
-      repoUrlLink.setAttribute('href', gitRepo.html_url);
-      repoUrlLink.setAttribute('target', '_blank');
-      repoUrlLink.appendChild(repoUrlLinkText);
-      repoUrlElement.appendChild(repoUrlText);
-      repoUrlElement.appendChild(repoUrlLink);
-      articleRepoElement.appendChild(repoTitleElement);
-      articleRepoElement.appendChild(repoUrlElement);
-
-      gitReposContainer.appendChild(articleRepoElement);
+    for (var i = 0; i < gitRepos.length; i++) {
+      gitRepo = gitRepos[i];
+      articleRepo = createRepoContainer(gitRepo);
+      gitReposContainer.appendChild(articleRepo);
     }
+  }
+
+  function createRepoContainer(repo) {
+    var articleRepoElement = document.createElement('article');
+    articleRepoElement.classList.add('repo');
+
+    var repoTitleElement = document.createElement('h3');
+    var repoTitleText = document.createTextNode(repo.name);
+    repoTitleElement.appendChild(repoTitleText);
+
+    var repoUrlElement = document.createElement('p');
+    var repoUrlText = document.createTextNode('URL: ');
+    var repoUrlLink = document.createElement('a');
+    var repoUrlLinkText = document.createTextNode(repo.html_url);
+
+    repoUrlLink.setAttribute('href', repo.html_url);
+    repoUrlLink.setAttribute('target', '_blank');
+    repoUrlLink.appendChild(repoUrlLinkText);
+    repoUrlElement.appendChild(repoUrlText);
+    repoUrlElement.appendChild(repoUrlLink);
+    articleRepoElement.appendChild(repoTitleElement);
+    articleRepoElement.appendChild(repoUrlElement);
+
+    return articleRepoElement;
   }
 
   </script>
