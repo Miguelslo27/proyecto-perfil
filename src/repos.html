@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GitHub Repos</title>
+
+  <include src="head-metatags"></include>  
+  <include src="head-frameworks"></include>  
+  <include src="head-styles"></include>  
+</head>
+<body>
+  <include src="header">
+    <arg activeRoute>repos</arg>
+  </include>
+
+  <section class="content centered_layout standard-content">
+    <h1>Mis repositorios en GitHub</h1>
+    <section class="repos-placeholder" id="repos-placeholder">
+      Cargando repositorios...
+    </section>
+
+    <section class="repos d-none" id="repos">
+    </section>
+  </section>
+
+  <include src="footer.html"></include>
+  <script src="scripts.js"></script>
+
+  <script>
+
+  var reqObject = new XMLHttpRequest(); // API / Application Programming Interface
+  reqObject.open("GET", "https://api.github.com/users/Miguelslo27/repos");
+  reqObject.send();
+  reqObject.addEventListener('readystatechange', handleRequestResponse);
+
+  function handleRequestResponse() {
+    var state = reqObject.readyState;
+    var status = reqObject.status;
+    var response = reqObject.response;
+
+    if (state == 4) {
+      if (status == 200) { // success
+        processGitResponse(JSON.parse(response)); // json.parse retorna un objeto JavaScript { } // JSON = JavaScript Object Notation
+      }
+    }
+  }
+
+  function processGitResponse(gitRepos) {
+    console.log(gitRepos);
+
+    var placeHolder = document.getElementById('repos-placeholder');
+    var gitReposContainer = document.getElementById('repos');
+
+    placeHolder.classList.add('d-none');
+    gitReposContainer.classList.remove('d-none');
+
+    for (var i = 0; i < gitRepos.length; i++) { // i = i + || i += 1 || i++
+      var gitRepo = gitRepos[i];
+
+      var articleRepoElement = document.createElement('article');
+      articleRepoElement.classList.add('repo');
+
+      var repoTitleElement = document.createElement('h3');
+      var repoTitleText = document.createTextNode(gitRepo.name);
+      repoTitleElement.appendChild(repoTitleText);
+
+      var repoUrlElement = document.createElement('p');
+      var repoUrlText = document.createTextNode('URL: ');
+      var repoUrlLink = document.createElement('a');
+      var repoUrlLinkText = document.createTextNode(gitRepo.html_url);
+
+      repoUrlLink.setAttribute('href', gitRepo.html_url);
+      repoUrlLink.setAttribute('target', '_blank');
+      repoUrlLink.appendChild(repoUrlLinkText);
+      repoUrlElement.appendChild(repoUrlText);
+      repoUrlElement.appendChild(repoUrlLink);
+      articleRepoElement.appendChild(repoTitleElement);
+      articleRepoElement.appendChild(repoUrlElement);
+
+      gitReposContainer.appendChild(articleRepoElement);
+    }
+  }
+
+  </script>
+</body>
+</html>

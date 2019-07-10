@@ -24,6 +24,10 @@ server.get('/contact', function (req, res) {
   return res.sendFile(path.join(__dirname, folderBuild, 'contact.html'));
 });
 
+server.get('/repos', function (req, res) {
+  return res.sendFile(path.join(__dirname, folderBuild, 'repos.html'));
+});
+
 server.listen(port, function () {
   console.log('Mi servidor esta en linea en el puerto ' + port);
 });
