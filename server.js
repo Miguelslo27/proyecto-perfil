@@ -4,8 +4,11 @@ var path = require('path');
 var port = process.env.PORT || 8080;
 var env = process.env.ENV || 'DEV';
 var folderBuild = env == 'PROD' ? '/dist/' : '/.temp/';
+var cors = require('cors');
+var api = require('./api.js');
 
 server.use(express.static(path.join(__dirname, folderBuild)));
+server.use(cors());
 
 server.get('/', function (req, res) {
   // console.log('Esta es la raiz de mi sitio');
@@ -26,6 +29,13 @@ server.get('/contact', function (req, res) {
 
 server.get('/repos', function (req, res) {
   return res.sendFile(path.join(__dirname, folderBuild, 'repos.html'));
+});
+
+server.get('/api/datos', function (req, res) {
+  res.status(200).send({
+    name: "Miguel",
+    lastName: "Sosa"
+  });
 });
 
 server.listen(port, function () {

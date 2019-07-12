@@ -81,6 +81,6 @@ Calculator.prototype.setOperation = function (operator) {
     calc.setValue2(this.input.value);
     calc.calcResult();
   }
-  
+
   this.input.focus();
 }

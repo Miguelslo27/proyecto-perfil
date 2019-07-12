@@ -7,7 +7,7 @@ var menu_button = document.getElementById('menu-button');
 if (menu_button) {
   menu_button.addEventListener('click', toggleMenu);
 }
-    
+
 var hire_me_button = document.getElementById('hire-me-button');
 
 if (hire_me_button) {
@@ -25,7 +25,7 @@ if (mobile_menu) {
 
 function toggleMenu() {
   mobile_menu.classList.remove('d-none');
-  
+
   if (mobile_menu.classList.contains('menu-hidden')) {
     mobile_menu.classList.add('menu-visible');
     mobile_menu.classList.remove('menu-hidden');
@@ -81,3 +81,68 @@ if (typeof Calculator !== 'undefined') {
     calc_eq.addEventListener('click', calc.setOperation.bind(calc, 'equal'));
   }
 }
+
+var requestUrl = 'http://localhost:8080/api/datos';
+
+var reqObj = new XMLHttpRequest();
+reqObj.open('get', requestUrl);
+reqObj.send();
+reqObj.addEventListener('readystatechange', function () {
+  console.log(reqObj);
+  var state = reqObj.readyState;
+  var status = reqObj.status;
+  var response = reqObj.response;
+
+  if (state == 4) {
+    if (status == 200) {
+      console.log(response);
+    }
+  }
+})
+
+/* 
+Arrow Function
+
+function (response) {
+  return response.json()
+}
+
+===>
+
+response => respuesta.json();
+
+ */
+
+var misDatos = fetch(requestUrl); // promise
+  // .then(response => response.json())
+  // .then(console.log);
+
+  // ...
+  // ...
+  // ...
+  // ...
+  // ...
+  // ...
+  // ...
+
+misDatos
+  .then(response => response.json())
+  .then(console.log);
+
+console.log('Mi promesa volvio o no?');
+
+// String Literals
+
+var apiHost = 'http://localhost:8080/api/';
+var dataPath = 'data'
+
+console.log(apiHost + datPath);
+console.log(`${apiHost}${dataPath}`);
+
+var mensaje = 'Lorem ipsum dolor sit amet ' + nombre + ' adipisicing elit. Repellat impedit ' + direccion + 'eveniet';
+    mensaje += 'incidunt ' + telefono + ' nesciunt libero eos, nemo ullam porro at atque consectetur nulla pariatur deserunt accusamus.'
+
+var mensaje = `Lorem ipsum dolor sit amet ${nombre} adipisicing elit. Repellat impedit ${direccion} eveniet
+              incidunt ${telefono} nesciunt libero eos, nemo ullam porro at
+              atque consectetur nulla pariatur deserunt
+              accusamus.`;

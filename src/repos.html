@@ -41,6 +41,12 @@
     var response = reqObject.response;
 
     if (state == 4) {
+      if (status != 200) {
+        // erro
+        console.log('error');
+        return;
+      }
+
       if (status == 200) { // success
         processGitResponse(JSON.parse(response)); // json.parse retorna un objeto JavaScript { } // JSON = JavaScript Object Notation
       }
@@ -64,6 +70,8 @@
       gitReposContainer.appendChild(articleRepo);
     }
   }
+
+  
 
   function createRepoContainer(repo) {
     var articleRepoElement = document.createElement('article');

@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "gulp build:prod",
     "dev": "gulp build:dev && nodemon server.js",
+    "serve:dev": "nodemon server.js",
     "start": "node server.js"
   },
   "repository": {
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.5",
+    "cors": "^2.8.5",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-htmlmin": "^5.0.1",

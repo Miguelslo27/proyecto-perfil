@@ -98,3 +98,13 @@ gulp.task('watch', gulp.series(['build:dev'], function(done) {
 gulp.task('build:prod', gulp.series('build:html:prod', 'build:sass:prod', 'build:files:prod'));
 
 gulp.task('default', gulp.series(['watch']));
+
+gulp.task('serve', gulp.series(['watch'], function () {
+  console.log("Serve has started");
+
+  browserSync({
+    server: {
+      baseDir: './.temp'
+    }
+  });
+}));
