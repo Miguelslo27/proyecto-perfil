@@ -11,7 +11,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
     sass.compiler = require('node-sass');
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   console.log('Clean temporal files has started');
 
   return gulp

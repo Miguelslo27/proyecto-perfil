@@ -80,7 +80,7 @@ img {
 header {
   background-color: $primary-color;
   text-align: center;
-  
+
   nav {
     background-color: $primary-color;
 
@@ -113,7 +113,11 @@ header {
   }
 }
 
-.content {}
+.content {
+  &.standard-content {
+    width: 900px;
+  }
+}
 
 .column-left,
 .column-center,
@@ -195,6 +199,43 @@ header {
 .progress .value {
   height: 5px;
   background-color: $secondary-color;
+}
+
+.repos-placeholder {
+  padding: 30px;
+  background: #efefef;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.repos {
+  display: grid;
+  margin-bottom: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  
+  .repo {
+    position: relative;
+    background: #efefef;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+    transition: box-shadow .3s ease;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 12px;
+      word-break: break-all;
+    }
+
+    &:hover {
+      box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.5);
+    }
+  }
 }
 
 footer {
