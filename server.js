@@ -1,10 +1,28 @@
 var express = require('express');
+var mongodb = require('mongodb');
+var mongoClient = mongodb.MongoClient;
 var server = express();
 var path = require('path');
 var port = process.env.PORT || 8080;
 var env = process.env.ENV || 'DEV';
 var folderBuild = env == 'PROD' ? '/dist/' : '/.temp/';
 var cors = require('cors');
+
+var mongoUrl = 'mongodb://localhost:27017/';
+var dbname = 'proyecto-pefril';
+
+function getMongoDataBase(url, dbname) {
+  var mdbPromise = new Promise(function (resolve, reject) {
+    mongoClient.connect(url, function (error, client) {
+      if (error) return reject(error);
+
+      var database = client.db(dbname);
+      resolve(database);
+    })
+  });
+
+  return mdbPromise;
+}
 
 server.use(express.static(path.join(__dirname, folderBuild)));
 server.use(cors());
@@ -16,8 +34,17 @@ server.get('/', function (req, res) {
 });
 
 server.get('/api/datos', function (req, res) {
+  getMongoDataBase(mongoUrl, dbname)
+    .then(function (db) {
+      console.log("Connection succed");
+      console.log(db.toString());
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+
   res.status(200).send({
-    name: "Miguel",
+    ame: "Miguel",
     lastName: "Sosa"
   });
 });
