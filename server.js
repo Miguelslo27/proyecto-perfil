@@ -11,17 +11,15 @@ var cors = require('cors');
 var mongoUrl = 'mongodb://localhost:27017/';
 var dbname = 'proyecto-perfil';
 
-function getMongoDataBase(url, dbname) {
-  var mdbPromise = new Promise(function (resolve, reject) {
-    mongoClient.connect(url, function (error, client) {
-      if (error) return reject(error);
-
-      var database = client.db(dbname);
-      resolve(database);
+function getCollection(collectionName) {
+  return mongoClient
+    .connect(mongoUrl)
+    .then(function (client) {
+      return client.db(dbname);
     })
-  });
-
-  return mdbPromise;
+    .then(function (database) {
+      return database.collection(collectionName);
+    });
 }
 
 server.use(express.static(path.join(__dirname, folderBuild)));
@@ -29,36 +27,24 @@ server.use(cors());
 
 server.get('/', function (req, res) {
   // console.log('Esta es la raiz de mi sitio');
-  // res.status(200).send('Bienvenido a mi servidor');
   return res.sendFile(path.join(__dirname, folderBuild, 'index.html'));
 });
 
-server.get('/api/datos', function (req, res) {
-  // getMongoDataBase(mongoUrl, dbname)
-  //   .then(function (db) {
-  //     db.collection('datos').find({}).toArray(function (error, data) {
-  //       if (error) {
-  //         console.error(error);
-  //         return res.status(500).send(error);
-  //       }
-
-  //       res.status(200).send(data[1] || {});
-  //     });
-  //   })
-  //   .catch(function (error) {
-  //     console.error(error);
-
-  //     return res.status(500).send(error);
-  //   });
-
-  mongoClient
-    .connect(mongoUrl)
-    .then(function (client) {
-      return client.db(dbname);
+server.get('/api/datos-personales', function (req, res) {
+  getCollection('datos')
+    .then(function (collection) {
+      return collection.find({}).toArray();
     })
-    .then(function (database) {
-      return database.collection('datos');
+    .then(function (results) {
+      return res.status(200).send(results[0] || {});
     })
+    .catch(function (error) {
+      return res.status(500).send(error);
+    });
+});
+
+server.get('/api/skills', function (req, res) {
+  getCollection('skills')
     .then(function (collection) {
       return collection.find({}).toArray();
     })
@@ -70,22 +56,17 @@ server.get('/api/datos', function (req, res) {
     });
 });
 
-server.post('/api/datos', function (req, res) {
-  getMongoDataBase(mongoUrl, dbname)
-    .then(function (db) {
-      var dataCollection = db.collection('datos');
-      dataCollection.insert({
-        name: 'Agustina',
-        lastname: 'Sosa',
-        age: '18'
-      }, function (error, result) {
-        console.log('Insert into datos');
-        console.log('error', error);
-        console.log('resutl', result);
-
-        return res.status(200).send('ok');
-      });
+server.get('/api/contact-info', function (req, res) {
+  getCollection('contact-info')
+    .then(function (collection) {
+      return collection.find({}).toArray();
     })
+    .then(function (results) {
+      return res.status(200).send(results[0] || {});
+    })
+    .catch(function (error) {
+      return res.status(500).send(error);
+    });
 });
 
 server.get('/home', function (req, res) {
