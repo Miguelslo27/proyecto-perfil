@@ -107,4 +107,4 @@ gulp.task('serve', gulp.series(['watch'], function () {
       baseDir: './.temp'
     }
   });
-})); 
+}));

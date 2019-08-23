@@ -7,7 +7,7 @@ var menu_button = document.getElementById('menu-button');
 if (menu_button) {
   menu_button.addEventListener('click', toggleMenu);
 }
-    
+
 var hire_me_button = document.getElementById('hire-me-button');
 
 if (hire_me_button) {
@@ -25,7 +25,7 @@ if (mobile_menu) {
 
 function toggleMenu() {
   mobile_menu.classList.remove('d-none');
-  
+
   if (mobile_menu.classList.contains('menu-hidden')) {
     mobile_menu.classList.add('menu-visible');
     mobile_menu.classList.remove('menu-hidden');
@@ -81,3 +81,24 @@ if (typeof Calculator !== 'undefined') {
     calc_eq.addEventListener('click', calc.setOperation.bind(calc, 'equal'));
   }
 }
+
+var HTTPReq = new XMLHttpRequest();
+HTTPReq.open('GET', 'http://localhost:3000/api/data');
+HTTPReq.send();
+
+var dataTitleElement = document.getElementById('data-title');
+var dataSubtitleElement = document.getElementById('data-subtitle');
+var dataBriefElement = document.getElementById('data-brief');
+var loaderElement = document.getElementById('loader');
+
+HTTPReq.addEventListener('readystatechange', function() {
+  if (HTTPReq.readyState === 4 && HTTPReq.status === 200) {
+    loaderElement.style.display = 'none';
+    
+    var responseJson = JSON.parse(HTTPReq.response);
+
+    dataTitleElement.innerText = responseJson.name;
+    dataSubtitleElement.innerText = responseJson.title;
+    dataBriefElement.innerText = responseJson.brief;
+  }
+});

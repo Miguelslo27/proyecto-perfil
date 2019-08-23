@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <include src="head-metatags"></include>  
-  <include src="head-frameworks"></include>  
-  <include src="head-styles"></include>  
+  <include src="head-metatags"></include>
+  <include src="head-frameworks"></include>
+  <include src="head-styles"></include>
 
   <title>Mi sitio personal</title>
 </head>
@@ -14,10 +14,10 @@
 
   <section class="content centered_layout layout-columns layout-bottom-clumns">
     <aside id="profile-info" class="col column-left">
-      <h1>Miguel Sosa</h1>
-      <h2>WEB UI Developer</h2>
+      <h1 id="data-title"><span></span></h1>
+      <h2 id="data-subtitle"></h2>
       <hr class="right">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nemo possimus aliquam accusamus magni quis error saepe sunt ipsum assumenda numquam, reprehenderit sequi enim nulla ut a veniam odio rem.</p>
+      <p id="data-brief"></p>
       <a href="#" class="button-primary" id="hire-me-button">Contrátame</a>
     </aside>
     <section id="profile-picture" class="col column-center">
@@ -54,6 +54,8 @@
       </ul>
     </aside>
   </section>
+
+  <div class="loader" id="loader">Loading...</div>
 
   <include src="footer.html"></include>
   <script src="scripts.js"></script>
