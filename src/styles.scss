@@ -37,6 +37,19 @@ img {
   display: none !important;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
 .layout-columns {
   display: flex;
   padding-top: 20px;
